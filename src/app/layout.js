@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       <body>
         <CssBaseline />
         <Navbar />
-        <Container sx={{ mt: 4, border: 1, borderColor: "grey.300", p: 2 }}>
+        <Container sx={{ mt: 4, p: 2 }}>
           {children}
         </Container>
       </body>

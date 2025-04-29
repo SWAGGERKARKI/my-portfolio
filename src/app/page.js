@@ -1,12 +1,13 @@
-'use client'
+'use client';
 // This is a client component, for interactivity and denotes that it will be rendered on the client side.
 
 // import Image from "next/image";
 // import styles from "./page.module.css";
 
-import { Button, Typography } from "@mui/material";
-import { Box, Container } from "@mui/system";
+import { Avatar, Button, Typography } from "@mui/material";
+import { Box, Container, Grid } from "@mui/system";
 import Link from "next/link";
+import profilePicture from '../../public/profile.png';
 
 export default function Home() {
   // return (
@@ -101,22 +102,40 @@ export default function Home() {
   // );
 
   return (
-    <Container maxWidth="md" sx={{ border: "1px solid grey", p: 2, mt: 10 }}>
-      <Typography variant="h4" sx={{ border: "1px solid red"}} gutterBottom>
-        Hi, I am <span style={{ color: "#9C27B0" }}><i>Sagar Karki</i></span>.
-      </Typography>
+    <Container maxWidth="lg" sx={{ mt: 4 }}>
+      <Grid container alignItems="center" justifyContent={'center'} spacing={4}>
+        
+        {/* left column: text */}
+        <Grid size={{ xs: 12, md: 6}} >
+          <Typography variant="h4"  gutterBottom>
+            Hi, I am <span style={{ color: "#9C27B0" }}><i>Sagar Karki</i></span>.
+          </Typography>
 
-      <Typography variant="h6" sx={{ color: "text.secondary" }}>
-        I'm a software engineer with a passion for building web applications using various technologies and frameworks like MERN, Next.js.
-      </Typography>
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            I'm a software engineer with a passion for building web applications using various technologies and frameworks like MERN, Next.js.
+          </Typography>
 
-      <Box sx={{ border: "1px solid green", mt: 4}}>
-        <Link href={'/projects'} passHref>
-          <Button variant="contained" size="large" sx={{ bgcolor: "#9C27B0" }}>
-            View My Projects
-          </Button>
-        </Link>
-      </Box>
+          <Box sx={{ mt: 4}}>
+            <Link href={'/projects'} passHref>
+              <Button variant="contained" size="large" sx={{ bgcolor: "#9C27B0" }}>
+                View My Projects
+              </Button>
+            </Link>
+          </Box>
+        </Grid>
+
+        {/* right column: profile picture */}
+        <Grid size={{ xs: 12, md: 6 }} textAlign={"center"}>
+          <Avatar
+            variant="rounded"
+            alt="Sagar Karki"
+            src="/profile-picture.jpeg"
+            sx={{ width: 250, height: 250, margin: '0 auto', boxShadow: 3 }}
+          />
+        </Grid>
+
+      </Grid>
+      
     </Container>
   );
 }
