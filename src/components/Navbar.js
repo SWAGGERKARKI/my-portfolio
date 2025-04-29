@@ -11,10 +11,10 @@ export default function Navbar() {
           My Portfolio
         </Typography>
         <Box sx={{ display: "flex", gap: 2}}>
-          <Link href={'/'} passHref><Button color="inherit">Home</Button></Link>
-          <Link href={'/about'} passHref><Button color="inherit">About</Button></Link>
-          <Link href={'/projects'} passHref><Button color="inherit">Projects</Button></Link>
-          <Link href={'/contact'} passHref><Button color="inherit">Contact</Button></Link>
+          <Link href={'/'} passHref><Button sx={{ color: "#fff" }}>Home</Button></Link>
+          <Link href={'/about'} passHref><Button sx={{ color: "#fff" }}>About</Button></Link>
+          <Link href={'/projects'} passHref><Button sx={{ color: "#fff" }}>Projects</Button></Link>
+          <Link href={'/contact'} passHref><Button sx={{ color: "#fff" }}>Contact</Button></Link>
         </Box>
       </Toolbar>
     </AppBar>

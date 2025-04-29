@@ -101,40 +101,49 @@ export default function Home() {
   // );
 
   return (
-    <Container maxWidth="lg" sx={{ mt: 4 }}>
-      <Grid container alignItems="center" justifyContent={'center'} spacing={4}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        background: "linear-gradient(to right,rgba(162, 127, 169, 0.5), #ffffff)",
+        display: "flex",
+        borderRadius: 2,
+      }}
+    >
+      <Container maxWidth="lg" sx={{ mt: 6 }}>
+        <Grid container  justifyContent={'center'} spacing={4}>
+          
+          {/* left column: text */}
+          <Grid size={{ xs: 12, sm: 12, md: 6 }} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
+            <Typography variant="h4"  gutterBottom>
+              Hi, I am <span style={{ color: "#9C27B0" }}><i>Sagar Karki</i></span>.
+            </Typography>
+
+            <Typography variant="h6" sx={{ color: "text.secondary" }}>
+              I'm a software engineer with a passion for building web applications using various technologies and frameworks like MERN, Next.js.
+            </Typography>
+
+            <Box sx={{ mt: 4}}>
+              <Link href={'/projects'} passHref>
+                <Button variant="contained" size="large" sx={{ bgcolor: "#9C27B0" }}>
+                  View My Projects
+                </Button>
+              </Link>
+            </Box>
+          </Grid>
+
+          {/* right column: profile picture */}
+          <Grid size={{ xs: 12, sm: 12, md: 6 }} textAlign={"center"}>
+            <Avatar
+              variant="rounded"
+              alt="Sagar Karki"
+              src="/profile-picture.jpeg"
+              sx={{ width: 460, height: 320, margin: '0 auto', boxShadow: 3, maxWidth: '100%' }}
+            />
+          </Grid>
+
+        </Grid>
         
-        {/* left column: text */}
-        <Grid size={{ xs: 12, md: 6}} >
-          <Typography variant="h4"  gutterBottom>
-            Hi, I am <span style={{ color: "#9C27B0" }}><i>Sagar Karki</i></span>.
-          </Typography>
-
-          <Typography variant="h6" sx={{ color: "text.secondary" }}>
-            I'm a software engineer with a passion for building web applications using various technologies and frameworks like MERN, Next.js.
-          </Typography>
-
-          <Box sx={{ mt: 4}}>
-            <Link href={'/projects'} passHref>
-              <Button variant="contained" size="large" sx={{ bgcolor: "#9C27B0" }}>
-                View My Projects
-              </Button>
-            </Link>
-          </Box>
-        </Grid>
-
-        {/* right column: profile picture */}
-        <Grid size={{ xs: 12, md: 6 }} textAlign={"center"}>
-          <Avatar
-            variant="rounded"
-            alt="Sagar Karki"
-            src="/profile-picture.jpeg"
-            sx={{ width: 250, height: 250, margin: '0 auto', boxShadow: 3 }}
-          />
-        </Grid>
-
-      </Grid>
-      
-    </Container>
+      </Container>
+    </Box>
   );
 }
