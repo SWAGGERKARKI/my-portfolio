@@ -7,7 +7,6 @@
 import { Avatar, Button, Typography } from "@mui/material";
 import { Box, Container, Grid } from "@mui/system";
 import Link from "next/link";
-import profilePicture from '../../public/profile.png';
 
 export default function Home() {
   // return (
