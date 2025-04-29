@@ -1,5 +1,12 @@
+'use client'
+// This is a client component, for interactivity and denotes that it will be rendered on the client side.
+
 // import Image from "next/image";
 // import styles from "./page.module.css";
+
+import { Button, Typography } from "@mui/material";
+import { Box, Container } from "@mui/system";
+import Link from "next/link";
 
 export default function Home() {
   // return (
@@ -92,6 +99,24 @@ export default function Home() {
   //     </footer>
   //   </div>
   // );
-  
-  return <h1>Welcome to my Portfolio.</h1>
+
+  return (
+    <Container maxWidth="md" sx={{ border: "1px solid grey", p: 2, mt: 10 }}>
+      <Typography variant="h4" sx={{ border: "1px solid red"}} gutterBottom>
+        Hi, I am <span style={{ color: "#9C27B0" }}><i>Sagar Karki</i></span>.
+      </Typography>
+
+      <Typography variant="h6" sx={{ color: "text.secondary" }}>
+        I'm a software engineer with a passion for building web applications using various technologies and frameworks like MERN, Next.js.
+      </Typography>
+
+      <Box sx={{ border: "1px solid green", mt: 4}}>
+        <Link href={'/projects'} passHref>
+          <Button variant="contained" size="large" sx={{ bgcolor: "#9C27B0" }}>
+            View My Projects
+          </Button>
+        </Link>
+      </Box>
+    </Container>
+  );
 }
