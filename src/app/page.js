@@ -6,6 +6,7 @@
 
 import { Avatar, Button, Typography } from "@mui/material";
 import { Box, Container, Grid } from "@mui/system";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -101,25 +102,25 @@ export default function Home() {
   // );
 
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        background: "linear-gradient(to right,rgba(162, 127, 169, 0.5), #ffffff)",
-        display: "flex",
-        borderRadius: 2,
-      }}
-    >
-      <Container maxWidth="lg" sx={{ mt: 6 }}>
-        <Grid container  justifyContent={'center'} spacing={4}>
+    // <Box
+    //   sx={{
+    //     minHeight: "100vh",
+    //     background: "linear-gradient(to right,rgba(162, 127, 169, 0.5), #ffffff)",
+    //     display: "flex",
+    //     borderRadius: 2,
+    //   }}
+    // >
+      <Container maxWidth="lg" sx={{ mt: 3, minHeight:"80vh" }}>
+        <Grid container spacing={2}>
           
           {/* left column: text */}
-          <Grid size={{ xs: 12, sm: 12, md: 6 }} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
-            <Typography variant="h4"  gutterBottom>
-              Hi, I am <span style={{ color: "#9C27B0" }}><i>Sagar Karki</i></span>.
+          <Grid size={{ xs: 12, md: 6 }} sx={{ minWidth: "30vw" }}>
+            <Typography variant="h3" fontWeight={700} sx={{ mt: '20%' }} gutterBottom>
+              Hi, I am Sagar Karki <br /> A <span style={{ color: "#9C27B0" }}>MERN Stack Developer.</span>
             </Typography>
 
-            <Typography variant="h6" sx={{ color: "text.secondary" }}>
-              I'm a software engineer with a passion for building web applications using various technologies and frameworks like MERN, Next.js.
+            <Typography variant="h6" fontWeight={700}>
+              A guy who loves to develop web applications.
             </Typography>
 
             <Box sx={{ mt: 4}}>
@@ -132,18 +133,24 @@ export default function Home() {
           </Grid>
 
           {/* right column: profile picture */}
-          <Grid size={{ xs: 12, sm: 12, md: 6 }} textAlign={"center"}>
+          <Grid size={{ xs: 12, md: 6 }} textAlign={"center"}>
             <Avatar
               variant="rounded"
               alt="Sagar Karki"
               src="/profile-picture.jpeg"
-              sx={{ width: 460, height: 320, margin: '0 auto', boxShadow: 3, maxWidth: '100%' }}
+              sx={{ 
+                width: 500, 
+                height: 500, 
+                margin: '0 auto', 
+                boxShadow: 3, 
+                maxWidth: '100%',
+              }}
             />
           </Grid>
 
         </Grid>
         
       </Container>
-    </Box>
+    // </Box>
   );
 }

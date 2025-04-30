@@ -2,9 +2,10 @@
 // import "./globals.css";
 'use client';
 
-import Navbar from "@/components/Navbar";
-import { Container, CssBaseline, ThemeProvider } from "@mui/material";
-import { useState } from "react";
+import Navbar from "@/app/components/Navbar";
+import { Container, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import { useState, useMemo } from "react";
+import Footer from "./components/Footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
 
   // create theme
   const theme = useMemo(() => createTheme({
-    palete: {
+    palette: {
       mode,
     },  
   }), [mode]);
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
           <Container sx={{ mt: 4, p: 2 }}>
             {children}
           </Container>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
