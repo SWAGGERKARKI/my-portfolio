@@ -7,7 +7,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 export default function Contact() {
   return (
-    <Container maxWidth='md'>
+    <Container maxWidth='md' sx={{ my: 4 }}>
       <Typography variant="h5" gutterBottom>
         Contact Me
       </Typography>
@@ -38,7 +38,7 @@ export default function Contact() {
           rel="noopener noreferrer"
           color="secondary"
         >
-          <LinkedIn />
+          <LinkedIn fontSize="small" />
         </IconButton>
 
         <IconButton
@@ -47,7 +47,7 @@ export default function Contact() {
           rel="noopener noreferrer"
           color="secondary"
         >
-          <GitHub />
+          <GitHub fontSize="small" />
         </IconButton>
       </Box>
     </Container>

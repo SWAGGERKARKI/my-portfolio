@@ -5,7 +5,7 @@ import { Container, Divider, List, ListItem, ListItemText, Typography } from "@m
 
 export default function About() {
   return (
-    <Container maxWidth="md" sx={{ mt: "10" }}>
+    <Container maxWidth="md" sx={{ my: 4 }}>
       <Typography variant="h5" gutterBottom>
         About me
       </Typography>
